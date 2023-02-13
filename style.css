@@ -9,9 +9,20 @@
 
 */
 
+html {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height : 100%;
+}
+
 body {
     margin: 0;
     background-color: #17262E;
+    height : 100%;
+    overflow: hidden;
 }
 
 .background {
@@ -45,8 +56,13 @@ body {
     flex : auto;
 }
 
-#menu .active {
+.nav {
+    width : 100%;
+}
+
+#menu .active i{
     border-bottom: #21897E solid 5px;
+    padding-bottom: 10%;
 }
 
 #menu li:hover {
@@ -63,6 +79,23 @@ body {
     font-family: 'Satisfy', cursive;
 }
 
+.raleway {
+    font-family: 'Raleway', sans-serif;
+}
+
+.accent {
+    color : #FF6978;
+}
+
+.title {
+    font-size: 70px;
+    text-align: center;
+}
+
+.container {
+    margin : 5%;
+}
+
 #big {
     text-align: center;
     width: max-content;
@@ -70,28 +103,50 @@ body {
     font-weight: 900;
 }
 
-#home {
+.page {
+    position: relative;
+    height : 100%;
+    top : -5%;
+    z-index : -1;
+
+    -webkit-transition:top 1.5s;
+	transition:top 1.5s;
+    display: flex;
 }
 
-.container{
-    display: inline-block;
+#home {
+    display :flex;
+    justify-content: center;
+}
+
+#presentation{
+    padding-top: 10%;
     align-items: center;
     text-align: center;
-    font-size: 100px;
+    color : #3BA99C;
+    font-size : 1.5em;
+    width : 60%;
+}
+
+#presentationText {
+    padding: 2%;
+    border-radius: 50px;
+    border : #21897E solid 3px;
+}
+
+#presentation a {
+    text-decoration: none;
+    color : #21897E;
 }
 
 #presentationName {
+    margin-top: 10%;
     color : #FF6978;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 0;
-    animation: typing;
-    animation-duration: 2s;
-    animation-timing-function: steps(15, end);
-    animation-fill-mode: forwards;
+    font-size: 70px;
+    text-align: center;
 }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+#me {
+    background-color: #21897E;
 }
+
