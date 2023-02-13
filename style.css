@@ -1,0 +1,97 @@
+/*
+    Color Palette
+    DARK: #17262E
+    SHADES : 
+        DARK : #21897E
+        MIDDLE : #3BA99C 
+        BRIGHT : #69D1C5
+    ACCENT : #FF6978 #54FF44
+
+*/
+
+body {
+    margin: 0;
+    background-color: #17262E;
+}
+
+.background {
+    background-color: #17262E;
+}
+
+#name {
+    color : #21897E ;
+    flex : 8;
+    margin-left: 10px;
+}
+
+#menu {
+    flex : 1;
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#menu li {
+    height: 100%;
+    display: inline;
+    display: flex;
+    align-items: center;
+    flex : auto;
+}
+
+#menu .active {
+    border-bottom: #21897E solid 5px;
+}
+
+#menu li:hover {
+    color : #21897E; 
+}
+
+#header {
+    height : 5%; 
+    background-color: #69D1C5;
+    display: flex;
+}
+
+.satisfy {
+    font-family: 'Satisfy', cursive;
+}
+
+#big {
+    text-align: center;
+    width: max-content;
+    font-size: xx-large;
+    font-weight: 900;
+}
+
+#home {
+}
+
+.container{
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    font-size: 100px;
+}
+
+#presentationName {
+    color : #FF6978;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing;
+    animation-duration: 2s;
+    animation-timing-function: steps(15, end);
+    animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
