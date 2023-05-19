@@ -1,6 +1,6 @@
 /*
     Color Palette
-    DARK: #17262E
+    DARK: #253f4c
     SHADES : 
         DARK : #21897E
         MIDDLE : #3BA99C 
@@ -20,13 +20,13 @@ html {
 
 body {
     margin: 0;
-    background-color: #17262E;
+    background-color: #253f4c;
     height : 100%;
     overflow: hidden;
 }
 
 .background {
-    background-color: #17262E;
+    background-color: #253f4c;
 }
 
 #name {
@@ -94,6 +94,7 @@ body {
 
 .container {
     margin : 5%;
+    width : 100%;
 }
 
 #big {
@@ -146,7 +147,20 @@ body {
     text-align: center;
 }
 
-#me {
+.left {
+    align-items: left;
+    text-align: left;
+}
+
+.text {
+    align-items: center;
+    text-align: center;
+}
+
+#me, #projects_info {
     background-color: #21897E;
+    color : #253f4c;
+    font-size : 1.5em;
+    width : 100%;
 }
 

@@ -1,5 +1,6 @@
 const nav = document.getElementsByClassName("nav");
 const pages = document.getElementsByClassName("page");
+let time = Date.now()
 
 let last_index = 0;
 for(let i = 0; i < nav.length; i++) {
@@ -9,6 +10,7 @@ for(let i = 0; i < nav.length; i++) {
         changePage(i)
     }
 }
+
 
 const changePage = (index) => {
     let nav_act = nav[index];
@@ -23,13 +25,17 @@ const changePage = (index) => {
 }
 
 window.onwheel = (e) => {
-    if(e.wheelDeltaY > 0) {
-        if(last_index > 0) {
-            changePage(last_index - 1)
-        }
-    }else if(e.wheelDeltaY < 0){
-        if(last_index < pages.length - 1) {
-            changePage(last_index + 1)
+    console.log(Date.now() - time);
+    if(Date.now() - time > 500) {
+        time = Date.now()
+        if(e.wheelDeltaY > 0) {
+            if(last_index > 0) {
+                changePage(last_index - 1)
+            }
+        }else if(e.wheelDeltaY < 0){
+            if(last_index < pages.length - 1) {
+                changePage(last_index + 1)
+            }
         }
     }
 }
